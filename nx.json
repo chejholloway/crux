@@ -1,0 +1,32 @@
+{
+  "npmScope": "ombmstudios",
+  "affected": { "defaultBase": "principal" },
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e",
+          "build-storybook"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "crux": { "tags": [] },
+    "crux-e2e": { "tags": [], "implicitDependencies": ["crux"] },
+    "portfolio": { "tags": [] },
+    "portfolio-e2e": { "tags": [], "implicitDependencies": ["portfolio"] }
+  }
+}

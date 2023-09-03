@@ -1,0 +1,73 @@
+<a
+  class="flex items-center px-3 py-4 text-xs font-bold text-gray-800 uppercase lg:text-white lg:hover:text-gray-300 lg:py-2"
+  href="#pablo"
+  (click)="toggleDropdown($event)"
+  #btnDropdownRef
+>
+  Demo Pages
+</a>
+<div
+  class="z-50 float-left py-2 text-base text-left list-none bg-white rounded shadow-lg min-w-48"
+  [ngClass]="dropdownPopoverShow ? 'block' : 'hidden'"
+  #popoverDropdownRef
+>
+  <span
+    class="block w-full px-4 pt-2 pb-0 text-sm font-bold text-gray-500 whitespace-no-wrap bg-transparent"
+  >
+    Admin Layout
+  </span>
+  <a
+    [routerLink]="['/admin/dashboard']"
+    class="block w-full px-4 py-2 text-sm font-normal text-gray-800 whitespace-no-wrap bg-transparent"
+  >
+    Dashboard
+  </a>
+  <a
+    [routerLink]="['/admin/settings']"
+    class="block w-full px-4 py-2 text-sm font-normal text-gray-800 whitespace-no-wrap bg-transparent"
+  >
+    Settings
+  </a>
+  <a
+    [routerLink]="['/admin/tables']"
+    class="block w-full px-4 py-2 text-sm font-normal text-gray-800 whitespace-no-wrap bg-transparent"
+  >
+    Tables
+  </a>
+  <div class="h-0 mx-4 my-2 border border-gray-200 border-solid"></div>
+  <span
+    class="block w-full px-4 pt-2 pb-0 text-sm font-bold text-gray-500 whitespace-no-wrap bg-transparent"
+  >
+    Auth Layout
+  </span>
+  <a
+    [routerLink]="['/auth/login']"
+    class="block w-full px-4 py-2 text-sm font-normal text-gray-800 whitespace-no-wrap bg-transparent"
+  >
+    Login
+  </a>
+  <a
+    [routerLink]="['/auth/register']"
+    class="block w-full px-4 py-2 text-sm font-normal text-gray-800 whitespace-no-wrap bg-transparent"
+  >
+    Register
+  </a>
+  <div class="h-0 mx-4 my-2 border border-gray-200 border-solid"></div>
+  <span
+    class="block w-full px-4 pt-2 pb-0 text-sm font-bold text-gray-500 whitespace-no-wrap bg-transparent"
+  >
+    No Layout
+  </span>
+  <a
+    [routerLink]="['/landing']"
+    class="block w-full px-4 py-2 text-sm font-normal text-gray-800 whitespace-no-wrap bg-transparent"
+  >
+    Lading
+  </a>
+  <a
+    [routerLink]="['/profile']"
+    class="block w-full px-4 py-2 text-sm font-normal text-gray-800 whitespace-no-wrap bg-transparent"
+  >
+    Profile
+  </a>
+</div>
